@@ -1,0 +1,40 @@
+.contacts {
+	text-align: center;
+	&__text {
+		margin-top: 80px;
+		font-size: 18px;
+	}
+	&__contact-me {
+		margin-top: 30px;
+		font-size: 22px;
+	}
+	&__email {
+		margin-top: 24px;
+		font-size: 26px;
+	}
+}
+
+@media (min-width: 834px) {
+	.contacts {
+		&__text {
+			font-size: 22px;
+		}
+		&__contact-me {
+			font-size: 28px;
+		}
+		&__email {
+			font-size: 32px;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.contacts {
+		&__contact-me {
+			font-size: 36px;
+		}
+		&__email {
+			font-size: 48px;
+		}
+	}
+}

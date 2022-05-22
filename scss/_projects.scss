@@ -1,0 +1,85 @@
+.projects {
+	margin-top: 100px;
+	@include responsive-md() {
+		margin-top: 120px;
+	}
+
+	&__container {
+		margin: 60px auto 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		height: 1200px;
+		overflow: hidden;
+		@include responsive-md() {
+			margin-top: 80px;
+			height: 800px;
+			max-width: 740px;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@include responsive-lg() {
+			max-width: 1024px;
+		}
+	}
+
+	&__card {
+		.card1 {
+			background-image: url(../../images/project1.png);
+		}
+		.card2 {
+			background-image: url(../../images/project2.png);
+		}
+		.card3 {
+			background-image: url(../../images/project3.png);
+		}
+		.card4 {
+			background-image: url(../../images/project4.png);
+		}
+		.card5 {
+			background-image: url(../../images/project5.png);
+		}
+
+		&__image {
+			position: relative;
+			display: flex;
+			// background-image: url(../../images/project1.png);
+			background-size: contain;
+			width: 280px;
+			height: 280px;
+			border-radius: 20px;
+		}
+		&__image--hover {
+			display: none;
+		}
+		&__image:hover &__image--hover {
+			background-color: rgba(10, 1, 25, 0.6);
+			width: 280px;
+			height: 280px;
+			border-radius: 20px;
+			position: absolute;
+			top: 0;
+			@include center();
+			flex-direction: column;
+			gap: 20px;
+		}
+		&__button {
+			@include btn();
+		}
+		&__button--highlighted {
+			@include btn();
+			background-color: $my_white;
+			color: $back_color;
+		}
+		&__heading {
+			margin-top: 16px;
+		}
+		&__button-row {
+			display: flex;
+			gap: 10px;
+			margin-top: 10px;
+		}
+	}
+}

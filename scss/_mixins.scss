@@ -1,0 +1,37 @@
+@mixin responsive-md() {
+	@media (min-width: 834px) {
+		@content;
+	}
+}
+
+@mixin responsive-lg() {
+	@media (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin btn-white() {
+	padding: 12px 36px;
+	background-color: $my_white;
+	color: $back_color;
+	border: none;
+	border-radius: 20px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+@mixin btn() {
+	padding: 8px 16px;
+	background-color: transparent;
+	color: $my_white;
+	border: 2px $my_white solid;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: 500;
+}
